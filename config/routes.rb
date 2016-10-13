@@ -70,11 +70,11 @@ Rails.application.routes.draw do
   get "/delete_photo/:id", :controller => "photos", :action => "destroy"
   #------------------------------
 
-  devise_for :users
-  # Routes for the User resource:
+  devise_for :user_accounts
+  # Routes for the User_account resource:
   # READ
-  get "/users", :controller => "users", :action => "index"
-  get "/users/:id", :controller => "users", :action => "show"
+  get "/user_accounts", :controller => "user_accounts", :action => "index"
+  get "/user_accounts/:id", :controller => "user_accounts", :action => "show"
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

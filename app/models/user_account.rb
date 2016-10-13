@@ -1,4 +1,4 @@
-class User < ApplicationRecord
+class UserAccount < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
   # Direct associations
@@ -9,6 +9,7 @@ class User < ApplicationRecord
 
   has_many   :likes,
              :class_name => "Vote",
+             :foreign_key => "user_id",
              :dependent => :destroy
 
   has_many   :received_friend_requests,

@@ -58,7 +58,7 @@
           User
         </label>
 
-        <%= select_tag(:user_id, options_from_collection_for_select(User.all, :id, :username), :class => "form-control") %>
+        <%= select_tag(:user_id, options_from_collection_for_select(UserAccount.all, :id, :username), :class => "form-control") %>
       </div>
 
       <!-- Label and input for photo_id -->
@@ -101,7 +101,7 @@
           Commenter
         </label>
 
-        <%= select_tag(:commenter_id, options_from_collection_for_select(User.all, :id, :username), :class => "form-control") %>
+        <%= select_tag(:commenter_id, options_from_collection_for_select(UserAccount.all, :id, :username), :class => "form-control") %>
       </div>
 
       <!-- Label and input for photo_id -->
@@ -134,10 +134,10 @@
         Fans
       </li>
 
-      <% @photo.fans.each do |user| %>
+      <% @photo.fans.each do |user_account| %>
         <li class="list-group-item">
-          <a href="/users/<%= user.id %>">
-            <%= user.created_at %>
+          <a href="/user_accounts/<%= user_account.id %>">
+            <%= user_account.created_at %>
           </a>
         </li>
       <% end %>
@@ -154,10 +154,10 @@
         Followers
       </li>
 
-      <% @photo.followers.each do |user| %>
+      <% @photo.followers.each do |user_account| %>
         <li class="list-group-item">
-          <a href="/users/<%= user.id %>">
-            <%= user.created_at %>
+          <a href="/user_accounts/<%= user_account.id %>">
+            <%= user_account.created_at %>
           </a>
         </li>
       <% end %>
@@ -174,10 +174,10 @@
         Commenters
       </li>
 
-      <% @photo.commenters.each do |user| %>
+      <% @photo.commenters.each do |user_account| %>
         <li class="list-group-item">
-          <a href="/users/<%= user.id %>">
-            <%= user.created_at %>
+          <a href="/user_accounts/<%= user_account.id %>">
+            <%= user_account.created_at %>
           </a>
         </li>
       <% end %>

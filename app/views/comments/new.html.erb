@@ -24,7 +24,7 @@
           Commenter
         </label>
 
-        <%= select_tag(:commenter_id, options_from_collection_for_select(User.all, :id, :username, @comment.commenter_id), :class => "form-control") %>
+        <%= select_tag(:commenter_id, options_from_collection_for_select(UserAccount.all, :id, :username, @comment.commenter_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for photo_id -->

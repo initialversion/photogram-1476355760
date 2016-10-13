@@ -5,7 +5,7 @@ class Comment < ApplicationRecord
              :counter_cache => true
 
   belongs_to :commenter,
-             :class_name => "User"
+             :class_name => "UserAccount"
 
   # Indirect associations
 

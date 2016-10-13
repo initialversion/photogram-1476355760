@@ -11,7 +11,7 @@ class Photo < ApplicationRecord
              :dependent => :destroy
 
   belongs_to :owner,
-             :class_name => "User",
+             :class_name => "UserAccount",
              :counter_cache => :posted_photos_count
 
   # Indirect associations
